@@ -3,8 +3,6 @@ package com.denesgarda.Calculator;
 import com.denesgarda.Calculator.util.TextAreaOutputStream;
 
 import javax.swing.*;
-import javax.swing.event.CaretEvent;
-import javax.swing.event.CaretListener;
 import javax.swing.text.DefaultCaret;
 import java.awt.*;
 import java.awt.event.FocusEvent;
