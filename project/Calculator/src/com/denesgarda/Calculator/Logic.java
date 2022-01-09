@@ -38,6 +38,8 @@ public class Logic {
                  * `(` `)` parenthesis
                  * `|` `|` absolute value
                  * `\` converts a fraction to a decimal
+                 * `^` Power
+                 * `!` Factorial
                  * `sqrt`
                  * `cbrt`
                  * `sin`

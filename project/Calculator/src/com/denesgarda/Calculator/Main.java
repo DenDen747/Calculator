@@ -8,6 +8,30 @@ public class Main {
     public static String breaker = "..................................................";
 
     public static String menuMessage = "---Calculator v" + VERSION + "---\n[A] Basic computation\n[B] Variable identification\n[C] Usage\n[~] Exit";
+    public static String usage = "Usage:\n" +
+            "- Basic computation\n" +
+            "    - `+` Addition\n" +
+            "    - `-` Subtraction\n" +
+            "    - `*` Multiplication\n" +
+            "    - `/` Division\n" +
+            "    - `(x+y)` Parenthesis\n" +
+            "    - `|x|` Absolute value\n" +
+            "    - `\\` Putting before an expression returns decimal form\n" +
+            "    - `^` Power\n" +
+            "    - `!` Factorial\n" +
+            "    - Functions (Format example: sqrt(14+2))\n" +
+            "        - sqrt\n" +
+            "        - cbrt\n" +
+            "        - sin\n" +
+            "        - cos\n" +
+            "        - tan\n" +
+            "        - asin\n" +
+            "        - acos\n" +
+            "        - atan\n" +
+            "        - sinh\n" +
+            "        - cosh\n" +
+            "        - tanh\n" +
+            "[ENTER] Continue";
 
     public static void main(String[] args) {
         window = new Window();
@@ -45,9 +69,9 @@ public class Main {
                 System.out.println(menuMessage);
             } else if (input.equalsIgnoreCase("C")) {
                 printBreaker();
-                System.out.println("*Usage goes here*");
-                printBreaker();
-                System.out.println(menuMessage);
+                System.out.println(usage);
+                window.setTitle("Calculator v" + VERSION + " - Usage");
+                inputID = 3;
             } else if (input.equalsIgnoreCase("~")) {
                 System.exit(0);
             } else {
@@ -83,6 +107,11 @@ public class Main {
                 printEdge(ans);
                 printBreaker();
             }
+        } else if (inputID == 3) {
+            printBreaker();
+            System.out.println(menuMessage);
+            window.setTitle("Calculator v" + VERSION + " - Menu");
+            inputID = 1;
         }
     }
 }
