@@ -3,7 +3,7 @@ package com.denesgarda.Calculator;
 public class Main {
     public static Window window;
 
-    public static double VERSION = 0.1;
+    public static double VERSION = 1.0;
     public static int inputID = 0;
     public static String breaker = "..................................................";
 
@@ -36,6 +36,7 @@ public class Main {
             if (input.equalsIgnoreCase("A")) {
                 printBreaker();
                 System.out.println("---Basic computation---\n[~] Exit");
+                window.setTitle("Calculator v" + VERSION + " - Basic computation");
                 inputID = 2;
             } else if (input.equalsIgnoreCase("B")) {
                 printBreaker();
@@ -59,9 +60,26 @@ public class Main {
             if (input.equalsIgnoreCase("~")) {
                 printBreaker();
                 System.out.println(menuMessage);
+                window.setTitle("Calculator v" + VERSION + " - Menu");
                 inputID = 1;
             } else {
-                String ans = Logic.compute(input);
+                String ans = String.valueOf(Logic.compute(input));
+                if (ans.equalsIgnoreCase("Infinity/NaN")) {
+                    ans = "MATH ERROR";
+                }
+                if (ans.contains(".0/")) {
+                    ans = ans.replace(".0/", "/");
+                }
+                if (ans.endsWith(".0")) {
+                    ans = ans.substring(0, ans.length() - 2);
+                }
+                if (ans.contains("/")) {
+                    if (ans.split("/")[1].equals("1")) {
+                        ans = ans.split("/")[0];
+                    } else if (ans.split("/")[1].equals("0")) {
+                        ans = "Infinity";
+                    }
+                }
                 printEdge(ans);
                 printBreaker();
             }
