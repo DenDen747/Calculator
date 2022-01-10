@@ -1,5 +1,8 @@
 package com.denesgarda.Calculator;
 
+import javax.swing.*;
+import java.awt.*;
+
 public class Logic {
     public static String compute(String input) {
         try {
@@ -122,5 +125,15 @@ public class Logic {
         } catch (Exception e) {
             return "SYNTAX ERROR";
         }
+    }
+
+    public static String graph(String input) {
+        JFrame frame = new JFrame();
+        frame.setSize(800, 600);
+        frame.setTitle("Graphs");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        return "Graph successful/failed";
     }
 }

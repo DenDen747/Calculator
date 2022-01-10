@@ -166,7 +166,7 @@ public class Main {
                 printBreaker();
                 inputID = 4;
             } else if (input.equalsIgnoreCase("4")) {
-                String ans = "Not yet implemented";
+                String ans = Logic.graph(adv);
                 printEdge(ans);
                 printBreaker();
                 inputID = 4;
