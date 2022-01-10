@@ -5,7 +5,7 @@ public class Main {
 
     public static double VERSION = 1.0;
     public static int inputID = 0;
-    public static String breaker = "......................................................................";
+    public static String breaker = "....................................................................";
 
     public static String adv = "";
 
