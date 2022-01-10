@@ -101,7 +101,7 @@ public class Main {
                     if (ans.split("/")[1].equals("1")) {
                         ans = ans.split("/")[0];
                     } else if (ans.split("/")[1].equals("0")) {
-                        ans = "Infinity";
+                        ans = "Undefined";
                     }
                 }
                 printEdge(ans);
