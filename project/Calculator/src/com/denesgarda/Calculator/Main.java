@@ -3,7 +3,7 @@ package com.denesgarda.Calculator;
 public class Main {
     public static Window window;
 
-    public static double VERSION = 1.0;
+    public static double VERSION = 1.1;
     public static int inputID = 0;
     public static String breaker = "....................................................................";
 
